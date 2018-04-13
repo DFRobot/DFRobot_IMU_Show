@@ -1,6 +1,6 @@
 # DFRobot_IMU_Show
 
-<img src="./image/imu_show.png">
+<img src="./image/imu_show.gif">
 
 ## usage
 
