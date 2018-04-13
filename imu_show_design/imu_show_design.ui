@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>imu_show</class>
+ <widget class="QWidget" name="imu_show">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>900</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>900</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="palette">
+   <palette>
+    <active>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>250</red>
+        <green>235</green>
+        <blue>215</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </active>
+    <inactive>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>250</red>
+        <green>235</green>
+        <blue>215</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </inactive>
+    <disabled>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>250</red>
+        <green>235</green>
+        <blue>215</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>250</red>
+        <green>235</green>
+        <blue>215</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </disabled>
+   </palette>
+  </property>
+  <property name="windowTitle">
+   <string>imu_show V1.5</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <widget class="OpenGLWidget" name="openGLWidget_imu">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>600</width>
+     <height>600</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>600</width>
+     <height>600</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>600</width>
+     <height>600</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_connect">
+   <property name="geometry">
+    <rect>
+     <x>785</x>
+     <y>40</y>
+     <width>100</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>12</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>connect</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox_baud">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>40</y>
+     <width>100</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox_com">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>10</y>
+     <width>100</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_com">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>10</y>
+     <width>60</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>com</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::AutoText</enum>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="wordWrap">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QTextBrowser" name="textBrowser_receive">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>70</y>
+     <width>280</width>
+     <height>451</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_baud">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>40</y>
+     <width>60</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>baud</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::AutoText</enum>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="wordWrap">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_logo">
+   <property name="geometry">
+    <rect>
+     <x>640</x>
+     <y>525</y>
+     <width>219</width>
+     <height>68</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>logo.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QQuickWidget" name="quickWidget">
+   <property name="geometry">
+    <rect>
+     <x>-100</x>
+     <y>840</y>
+     <width>300</width>
+     <height>200</height>
+    </rect>
+   </property>
+   <property name="resizeMode">
+    <enum>QQuickWidget::SizeRootObjectToView</enum>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_RefreshCom">
+   <property name="geometry">
+    <rect>
+     <x>785</x>
+     <y>10</y>
+     <width>100</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>12</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>refresh com</string>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QQuickWidget</class>
+   <extends>QWidget</extends>
+   <header>QtQuickWidgets/QQuickWidget</header>
+  </customwidget>
+  <customwidget>
+   <class>OpenGLWidget</class>
+   <extends>QOpenGLWidget</extends>
+   <header>OpenGLWidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton_connect</sender>
+   <signal>clicked()</signal>
+   <receiver>imu_show</receiver>
+   <slot>onConnect()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>778</x>
+     <y>48</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>868</x>
+     <y>23</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_RefreshCom</sender>
+   <signal>clicked()</signal>
+   <receiver>imu_show</receiver>
+   <slot>onRefreshCom()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>836</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>894</x>
+     <y>25</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_baud</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>imu_show</receiver>
+   <slot>onComboBaudChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>709</x>
+     <y>49</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>634</x>
+     <y>65</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>onConnect()</slot>
+  <slot>onOpenGLWidgetCompose()</slot>
+  <slot>onRefreshCom()</slot>
+  <slot>onComboBaudChanged()</slot>
+ </slots>
+</ui>
