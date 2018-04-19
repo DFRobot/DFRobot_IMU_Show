@@ -13,3 +13,15 @@ Pitch:xxx.xx roll:xxx.xx yaw:xxx.xx ...'\n' <br>
 Example: pitch:32.12 roll:124.2145 yaw:1.057 '\n' <br>
 <br>
 Then the cube will be rotated in the data format 
+
+<br>
+## Compatibility
+
+system                | Work Well | Work Wrong | Untested  | Remarks
+------------------ | :----------: | :----------: | :---------: | -----
+win7 64  |      √       |             |            | 
+win7 32  |      √       |             |            | 
+win8 64 |       √      |             |            | 
+win8 32 |             |             |      √      | 
+win10 64 |      √       |             |            | 
+win10 32 |      √       |             |            | 
